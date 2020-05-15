@@ -1,0 +1,9 @@
+if [ -z "$DEDYN_TOKEN" ] ; then
+# Place your dedyn.io access token here:
+DEDYN_TOKEN="deseciotokenhere"
+fi
+
+if [ -z "$DEDYN_NAME" ] ; then
+# Set your dedyn.io domain name here:
+DEDYN_NAME="yourdomain.dedyn.io"
+fi

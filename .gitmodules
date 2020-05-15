@@ -1,0 +1,6 @@
+[submodule "letsencrypt-autorenew-docker"]
+	path = letsencrypt-autorenew-docker
+	url = https://github.com/ebarault/letsencrypt-autorenew-docker.git
+[submodule "certbot-hook"]
+	path = certbot-hook
+	url = https://github.com/desec-utils/certbot-hook.git
