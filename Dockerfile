@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:latest
 MAINTAINER Oleg Kurapov (@kurapov)
 
 ENV UID="1000"
