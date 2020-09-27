@@ -22,9 +22,10 @@ if ./run_certbot.sh
 
 then
   for domain in $DOMAINS; do
-	d=${domain%%,*}
+    d=${domain%%,*}
+    mv /certs/$d.pem /certs/$d.cert.pem
     openssl pkcs12 -export -out /certs/$d.pfx -inkey /certs/$d.key.pem -in /certs/$d.cert.pem -certfile /certs/$d.chain.pem -password pass:$PASSWORD
-	cat /certs/$d.fullchain.pem /certs/$d.key.pem > /certs/$d.pem
+    cat /certs/$d.fullchain.pem /certs/$d.key.pem > /certs/$d.pem
   done
   chown ${UID}:${GUID} /certs/*
   chmod o-rw /certs/*
