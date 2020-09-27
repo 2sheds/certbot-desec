@@ -13,8 +13,7 @@ COPY ./letsencrypt-autorenew-docker/scripts/run_certbot.sh .
 COPY ./certbot-hook/hook.sh .
 COPY dedynauth .dedynauth
 COPY entrypoint.sh .
-RUN chmod -R +x . && \
-    apk update && \
+RUN chmod +x *.sh && \
 	apk add --no-cache openssl curl bind-tools bash ca-certificates certbot && \
 	rm -rf /tmp/* /var/tmp/*
 
